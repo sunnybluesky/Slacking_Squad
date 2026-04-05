@@ -1,0 +1,40 @@
+
+@font-face {
+    font-family: 'ktegaki';
+    src: url('assets/KTEGAKI.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 100;
+}
+
+:root{
+    --bg-color:#16161f;
+    --bg-color-2:#242432;
+    --text-color:#fff;
+    --border-color:#6b5477;
+}
+body{
+    background-color: var(--bg-color);
+    color:var(--text-color);
+    font-family: ktegaki;
+}
+header{
+    background-color: #302039;
+}
+a{
+    color: #b495e3;;
+}
+main{
+}
+.card{
+    background-color: var(--bg-color-2);
+    border: var(--border-color) solid 2px dashed;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+.flex{
+    display: flex;
+}
+.card-img-top{
+    height: 200px;
+    background-color: #3636cc;
+}
