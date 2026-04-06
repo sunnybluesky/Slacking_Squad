@@ -8,7 +8,7 @@
 
 @media (prefers-color-scheme: dark) {
 :root{
-    --hd-color:#302039;
+    --hd-color: linear-gradient(83deg,rgba(48, 32, 57, 1) 0%, rgba(58, 32, 82, 1) 100%);
     --bg-color:#16161f;
     --bg-color-2:#242432;
     --text-color:#fff;
@@ -27,6 +27,7 @@
     --link-color: #4b3270;
     --link-color-2: #d7a6f4;
 }
+
 }
     .portrait{
         display: none;
@@ -52,7 +53,7 @@ body{
     font-family: ktegaki;
 }
 header{
-    background-color: var(--hd-color)
+    background: var(--hd-color)
 }
 header a{
     color: var(--link-color-2);
@@ -75,3 +76,88 @@ main{
     height: 200px;
     background-color: #3636cc;
 }
+
+/*Violet card*/
+
+.violet-nebula{
+    background:
+  radial-gradient(ellipse at 15% 15%, rgba(#242432, 0.28), transparent 55%),
+  radial-gradient(ellipse at 85% 80%, rgba(#16161f, 0.22), transparent 50%),
+  radial-gradient(ellipse at 55% 110%, rgba(#0d0d1a, 0.15), transparent 45%),
+  #0d0d1a;  /* ← 暗いベース */
+
+  border: 1px solid rgba(#302039, 0.5);
+    box-shadow:
+  0 0 0 1px rgba(#302039, 0.08),   /* ← 極薄の外枠 */
+  0 0 18px rgba(#302039, 0.30),    /* ← 近接グロー */
+  0 0 60px rgba(#302039, 0.12),    /* ← 遠方ぼんやり光 */
+  inset 0 0 50px rgba(#302039, 0.06); /* ← 内側の反射 */
+}
+
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .violet-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 18px;
+      padding: 32px 28px;
+      width: 320px;
+
+      background:
+        radial-gradient(ellipse at 15% 15%, rgba(139, 92, 246, 0.28) 0%, transparent 55%),
+        radial-gradient(ellipse at 85% 80%, rgba(200, 56, 248, 0.22) 0%, transparent 50%),
+        radial-gradient(ellipse at 55% 110%, rgba(6, 10, 53, 0.15) 0%, transparent 45%),
+        #0d0d1a;
+
+      border: 1px solid rgba(139, 92, 246, 0.5);
+
+      box-shadow:
+        0 0 0 1px rgba(139, 92, 246, 0.08),
+        0 0 18px rgba(139, 92, 246, 0.30),
+        0 0 60px rgba(139, 92, 246, 0.12),
+        inset 0 0 50px rgba(139, 92, 246, 0.06);
+
+      color: #e2d9ff;
+    }
+
+    .violet-orb {
+      /*
+      position: absolute;
+      top: -30px;
+      left: -30px;
+      */
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: rgba(139, 92, 246, 0.18);
+      filter: blur(28px);
+      pointer-events: none;
+    }
+
+    .violet-card-title {
+      font-weight: 500;
+      margin-bottom: 8px;
+      letter-spacing: 0.01em;
+    }
+
+    .violet-card-sub {
+      font-size: 13px;
+      line-height: 1.6;
+      color: #a78bfa;
+    }
+
+    .violet-tag {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 11px;
+      font-family: monospace;
+      padding: 3px 8px;
+      border-radius: 6px;
+      background: rgba(139, 92, 246, 0.15);
+      color: #c4b5fd;
+    }
