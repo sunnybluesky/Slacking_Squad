@@ -46,7 +46,6 @@
      opacity: 0.2;
 }
 
-
 body{
     background-color: var(--bg-color);
     color:var(--text-color);
@@ -150,7 +149,6 @@ main{
       line-height: 1.6;
       color: #a78bfa;
     }
-
     .violet-tag {
       display: inline-block;
       margin-top: 16px;
