@@ -28,6 +28,22 @@
     --link-color-2: #d7a6f4;
 }
 }
+    .portrait{
+        display: none;
+    }
+@media (max-width: 1407px) {
+    .landscape{
+        display: none;
+    }
+    .portrait{
+        display: block;
+    }
+
+ }
+
+.carousel-item > img{
+     opacity: 0.2;
+}
 
 
 body{
