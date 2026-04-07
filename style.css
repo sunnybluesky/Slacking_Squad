@@ -1,161 +1,271 @@
-
 @font-face {
-    font-family: 'ktegaki';
-    src: url('assets/KTEGAKI.ttf') format('truetype');
-    font-style: normal;
-    font-weight: 100;
+  font-family: "ktegaki";
+  src: url("assets/KTEGAKI.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100;
 }
 
 @media (prefers-color-scheme: dark) {
-:root{
-    --hd-color: linear-gradient(83deg,rgba(48, 32, 57, 1) 0%, rgba(58, 32, 82, 1) 100%);
-    --bg-color:#16161f;
-    --bg-color-2:#242432;
-    --text-color:#fff;
-    --border-color:#6b5477;
+  :root {
+    --hd-color: linear-gradient(
+      83deg,
+      rgba(48, 32, 57, 1) 0%,
+      rgba(58, 32, 82, 1) 100%
+    );
+    --bg-color: #16161f;
+    --bg-color-2: #242432;
+    --text-color: #fff;
+    --border-color: #6b5477;
     --link-color: #b495e3;
     --link-color-2: #b495e3;
-}
+  }
+  .bg {
+    background:
+      radial-gradient(
+        ellipse at 15% 15%,
+        rgba(139, 92, 246, 0.28) 0%,
+        transparent 55%
+      ),
+      radial-gradient(
+        ellipse at 85% 80%,
+        rgba(208, 97, 245, 0.22) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        ellipse at 85% 20%,
+        rgba(245, 97, 240, 0.22) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        ellipse at 39% 60%,
+        rgba(97, 169, 245, 0.22) 0%,
+        transparent 100%
+      ),
+      radial-gradient(
+        ellipse at 55% 110%,
+        rgba(3, 5, 28, 0.15) 0%,
+        transparent 45%
+      ),
+      #0d0d1a;
+  }
 }
 @media (prefers-color-scheme: light) {
-:root{
-    --hd-color:#574363;
-    --bg-color:#f5f5ff;
-    --bg-color-2:#c7c7db;
-    --text-color:#16161f;
-    --border-color:#6b5477;
+  :root {
+    --hd-color: #574363;
+    --bg-color: #f5f5ff;
+    --bg-color-2: #c7c7db;
+    --text-color: #16161f;
+    --border-color: #6b5477;
     --link-color: #4b3270;
     --link-color-2: #d7a6f4;
+  }
 }
-
+.portrait {
+  display: none;
 }
-    .portrait{
-        display: none;
-    }
 @media (max-width: 1407px) {
-    .landscape{
-        display: none;
-    }
-    .portrait{
-        display: block;
-    }
-
- }
-
-.carousel-item > img{
-     opacity: 0.2;
+  .landscape {
+    display: none;
+  }
+  .portrait {
+    display: block;
+  }
 }
 
-body{
-    background-color: var(--bg-color);
-    color:var(--text-color);
-    font-family: ktegaki;
+.carousel-item > img {
+  opacity: 0.2;
 }
-header{
-    background: var(--hd-color)
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: ktegaki;
 }
-header a{
-    color: var(--link-color-2);
+header {
+  background: var(--hd-color);
 }
-a{
-    color: var(--link-color);
+header a {
+  color: var(--link-color-2);
 }
-main{
+a {
+  color: var(--link-color);
 }
-.card{
-    background-color: var(--bg-color-2);
-    border: var(--border-color) solid 2px dashed;
-    border-radius: 10px;
-    margin-right: 20px;
+main {
 }
-.flex{
-    display: flex;
+.card {
+  background: rgba(89, 91, 108, 0.1);
+  border: var(--border-color) solid 2px dashed;
+  border-radius: 10px;
+  margin-right: 20px;
 }
-.card-img-top{
-    height: 200px;
-    background-color: #3636cc;
+.flex {
+  display: flex;
+}
+.card-img-top {
+  height: 200px;
+  background-color: #3636cc;
 }
 
 /*Violet card*/
 
-.violet-nebula{
-    background:
-  radial-gradient(ellipse at 15% 15%, rgba(#242432, 0.28), transparent 55%),
-  radial-gradient(ellipse at 85% 80%, rgba(#16161f, 0.22), transparent 50%),
-  radial-gradient(ellipse at 55% 110%, rgba(#0d0d1a, 0.15), transparent 45%),
-  #0d0d1a;  /* ← 暗いベース */
+.violet-nebula {
+  background:
+    radial-gradient(ellipse at 15% 15%, rgba(#242432, 0.28), transparent 55%),
+    radial-gradient(ellipse at 85% 80%, rgba(#16161f, 0.22), transparent 50%),
+    radial-gradient(ellipse at 55% 110%, rgba(#0d0d1a, 0.15), transparent 45%),
+    #0d0d1a; /* ← 暗いベース */
 
   border: 1px solid rgba(#302039, 0.5);
-    box-shadow:
-  0 0 0 1px rgba(#302039, 0.08),   /* ← 極薄の外枠 */
-  0 0 18px rgba(#302039, 0.30),    /* ← 近接グロー */
-  0 0 60px rgba(#302039, 0.12),    /* ← 遠方ぼんやり光 */
-  inset 0 0 50px rgba(#302039, 0.06); /* ← 内側の反射 */
+  box-shadow:
+    0 0 0 1px rgba(#302039, 0.08),
+    /* ← 極薄の外枠 */ 0 0 18px rgba(#302039, 0.3),
+    /* ← 近接グロー */ 0 0 60px rgba(#302039, 0.12),
+    /* ← 遠方ぼんやり光 */ inset 0 0 50px rgba(#302039, 0.06); /* ← 内側の反射 */
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+.violet-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  padding: 32px 28px;
+  width: 320px;
 
-    .violet-card {
-      position: relative;
-      overflow: hidden;
-      border-radius: 18px;
-      padding: 32px 28px;
-      width: 320px;
+  background:
+    radial-gradient(
+      ellipse at 15% 15%,
+      rgba(139, 92, 246, 0.28) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse at 85% 80%,
+      rgba(200, 56, 248, 0.22) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at 55% 110%,
+      rgba(6, 10, 53, 0.15) 0%,
+      transparent 45%
+    ),
+    #0d0d1a;
 
-      background:
-        radial-gradient(ellipse at 15% 15%, rgba(139, 92, 246, 0.28) 0%, transparent 55%),
-        radial-gradient(ellipse at 85% 80%, rgba(200, 56, 248, 0.22) 0%, transparent 50%),
-        radial-gradient(ellipse at 55% 110%, rgba(6, 10, 53, 0.15) 0%, transparent 45%),
-        #0d0d1a;
+  border: 1px solid rgba(139, 92, 246, 0.5);
 
-      border: 1px solid rgba(139, 92, 246, 0.5);
+  box-shadow:
+    0 0 0 1px rgba(139, 92, 246, 0.08),
+    0 0 18px rgba(139, 92, 246, 0.3),
+    0 0 60px rgba(139, 92, 246, 0.12),
+    inset 0 0 50px rgba(139, 92, 246, 0.06);
 
-      box-shadow:
-        0 0 0 1px rgba(139, 92, 246, 0.08),
-        0 0 18px rgba(139, 92, 246, 0.30),
-        0 0 60px rgba(139, 92, 246, 0.12),
-        inset 0 0 50px rgba(139, 92, 246, 0.06);
+  color: #e2d9ff;
+}
 
-      color: #e2d9ff;
-    }
-
-    .violet-orb {
-      /*
+.violet-orb {
+  /*
       position: absolute;
       top: -30px;
       left: -30px;
       */
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      background: rgba(139, 92, 246, 0.18);
-      filter: blur(28px);
-      pointer-events: none;
-    }
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(139, 92, 246, 0.18);
+  filter: blur(28px);
+  pointer-events: none;
+}
 
-    .violet-card-title {
-      font-weight: 500;
-      margin-bottom: 8px;
-      letter-spacing: 0.01em;
-    }
+.violet-card-title {
+  font-weight: 500;
+  margin-bottom: 8px;
+  letter-spacing: 0.01em;
+}
 
-    .violet-card-sub {
-      font-size: 13px;
-      line-height: 1.6;
-      color: #a78bfa;
-    }
-    .violet-tag {
-      display: inline-block;
-      margin-top: 16px;
-      font-size: 11px;
-      font-family: monospace;
-      padding: 3px 8px;
-      border-radius: 6px;
-      background: rgba(139, 92, 246, 0.15);
-      color: #c4b5fd;
-    }
+.violet-card-sub {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #a78bfa;
+}
+.violet-tag {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 11px;
+  font-family: monospace;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: rgba(139, 92, 246, 0.15);
+  color: #c4b5fd;
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+
+  position: fixed;
+
+  opacity: 0.5;
+
+  z-index: -99999;
+}
+
+h1 {
+  /* --- 基本の文字設定 --- */
+  font-size: 4rem;
+  font-weight: bold;
+  text-transform: uppercase; /* 大文字にするとネオンっぽさが増します */
+  letter-spacing: 0.05em;
+
+  /* --- 1. 文字自体のグラデーション（ベース） --- */
+  background: linear-gradient(
+    135deg,
+    #ffb3ba 10%, /* パステルピンク */
+    #ffffba 30%, /* パステルイエロー */
+    #baffc9 50%, /* パステルグリーン */
+    #bae1ff 70%, /* パステルブルー */
+    #e0baff 90%  /* パステルパープル */
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  /* --- 2. 複数の色を同時に発光させる（ここが重要） --- */
+  /* text-shadow をカンマで区切って複数重ねます。
+     それぞれ少しずつ色とずらし方を変えることで、光が混ざり合う様子を表現します。 */
+  text-shadow:
+    /* 白色（コアの光） */
+    0 0 2px rgba(255, 255, 255, 0.9),
+    
+    /* ピンク系の光（左上へ） */
+    -5px -5px 15px rgba(255, 179, 186, 0.7),
+    
+    /* 水色系の光（右下へ） */
+    5px 5px 15px rgba(186, 225, 255, 0.7),
+    
+    /* 黄色系の光（右上へ） */
+    5px -5px 20px rgba(255, 255, 186, 0.5),
+    
+    /* 紫系の光（左下へ） */
+    -5px 5px 25px rgba(224, 186, 255, 0.5),
+
+    /* 遠くへ広がる大きな光（青紫系） */
+    0 0 40px rgba(186, 186, 255, 0.4);
+
+  /* --- （オプション）わずかにまたたくアニメーション --- */
+  animation: flicker 4s infinite alternate;
+}
+
+/* アニメーション：全体の透明度をわずかに揺らして、リアルなネオン感を出す */
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  92% { opacity: 1; }
+  93% { opacity: 0.98; }
+  94% { opacity: 0.95; }
+  95% { opacity: 0.99; }
+  96% { opacity: 0.93; }
+}
